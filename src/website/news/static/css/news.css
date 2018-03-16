@@ -7,7 +7,7 @@ body {
 }
 
 .page-header {
-    background-color: #1a53ff;
+    background-color: #00bcd4;
     margin-top: 0;
     padding: 30px 30px 30px 40px;
     text-align: center;
@@ -25,4 +25,33 @@ body {
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+.card-event.mdl-card {
+  width:100%;
+  margin:0 auto;
+  height: 256px;
+  background: #fff7e6;
+  text_color: #00000;
+}
+.card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.card-event > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+
+.card-event > .mdl-card__title,
+.card-event > .mdl-card__actions,
+.card-event > .mdl-card__actions > .mdl-button {
+  color: #fff;
 }

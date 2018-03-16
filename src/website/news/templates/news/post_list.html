@@ -1,17 +1,27 @@
 {% extends "news/index.html" %}
 
 {% block content %}
-    {% for post in object_list %}
-        <p>published: {{ post.date | date:"d.m.Y"}}</p>
-        <p>published by: {{ post.author }}</p>
-        <h2>
-            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-        </h2>
-        <p>{{ post.announcement }}</p>
-        <p>tags: {{ post.category }}</p>
-        {% empty %}
-        <p>No news</p>
-    {% endfor %}
+{% for post in object_list %}
+
+<div class="content mdl-color--white content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+    <h3>{{ post.title }}</h3>
+    <h7>{{ post.date | date:"d.m.Y"}}, {{ post.author }}</h7>
+    <p>{{ post.announcement }}</p>
+    <span class="mdl-chip">
+        <span class="mdl-chip__text">{{ post.category }}</span>
+    </span>
+</div>
+
+<a href="{{ post.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+    MORE
+</a>
+
+<div class="mdl-card__actions mdl-card--border">
+</div>
+
+{% empty %}
+<p>No news</p>
+{% endfor %}
 {% endblock %}
 
 
