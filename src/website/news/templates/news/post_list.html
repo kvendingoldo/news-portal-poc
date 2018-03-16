@@ -5,7 +5,7 @@
 
 <div class="content mdl-color--white content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
     <h3>{{ post.title }}</h3>
-    <h7>{{ post.date | date:"d.m.Y"}}, {{ post.author }}</h7>
+    <h7>by {{ post.author }} / {{ post.date | date:"d.m.Y"}}</h7>
     <p>{{ post.announcement }}</p>
     <span class="mdl-chip">
         <span class="mdl-chip__text">{{ post.category }}</span>
