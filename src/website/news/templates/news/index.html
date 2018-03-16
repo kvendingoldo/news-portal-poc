@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>News</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+        {% block extrahead %}
+        {% endblock %}
+        <script type="text/javascript">
+        $(function(){
+            {% block jquery %}
+            {% endblock %}
+        });
+        </script>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1>
+                <a href="/">News portal</a>
+            </h1>
+         </div>
+
+        {% block content %}
+            Empty page
+        {% endblock %}
+    </body>
+</html>

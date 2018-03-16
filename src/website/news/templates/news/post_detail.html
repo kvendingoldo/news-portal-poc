@@ -1,0 +1,10 @@
+{% extends 'news/index.html' %}
+
+<div class="post">
+    {% block content %}
+        <p>published: {{ post.date | date:"d.m.Y"}}</p>
+        <p>published by: {{ post.author }}</p>
+        <p>{{ post.body }}</p>
+        <p>tags: {{ post.category }}</p>
+    {% endblock %}
+</div>
