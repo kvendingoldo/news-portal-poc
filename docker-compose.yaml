@@ -1,0 +1,34 @@
+version: '2'
+services:
+  portal-mysql:
+      image: mysql:latest
+      container_name: "portal-mysql"
+      environment:
+        MYSQL_DATABASE: website
+        MYSQL_USER: kvendingoldo
+        MYSQL_PASSWORD: q7W#t&d)CYxt8dK
+        MYSQL_ROOT_PASSWORD: q7W#t&d)CYxt8dK
+      command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      restart: always
+      ports:
+        - 3306:3306
+      networks:
+        - portal-network
+
+  portal-backend:
+      image: portal-backend:latest
+      container_name: "portal-backend"
+      depends_on:
+        - portal-mysql
+      ports:
+        - 8000:8000
+      networks:
+        - portal-network
+
+networks:
+  portal-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.4.0/26
+          gateway: 192.168.4.1
