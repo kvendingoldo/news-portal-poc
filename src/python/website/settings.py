@@ -19,6 +19,7 @@ STATICFILES_DIRS = (
 SECRET_KEY = 'ib@p2v%#jd$3*zv^nx3xsdy@6^f4r^ivj276poko+m@(u-7u#l'
 
 DEBUG = True
+APPEND_SLASH = False
 
 ALLOWED_HOSTS = []
 
@@ -33,6 +34,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
+
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

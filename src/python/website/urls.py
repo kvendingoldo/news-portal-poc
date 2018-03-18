@@ -3,6 +3,7 @@
 from django.contrib import admin
 from django.urls import include, re_path
 
+
 admin.autodiscover()
 
 urlpatterns = [
