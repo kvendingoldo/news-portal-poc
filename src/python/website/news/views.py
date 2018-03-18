@@ -6,6 +6,7 @@ from website.news.models import Post
 
 class PostsListView(ListView):
     model = Post
+    paginate_by = 10
 
 
 class PostDetailView(DetailView):
