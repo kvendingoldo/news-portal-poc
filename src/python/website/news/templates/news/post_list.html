@@ -8,7 +8,9 @@
     <h7>by {{ post.author }} / {{ post.date | date:"d.m.Y"}}</h7>
     <p>{{ post.announcement }}</p>
     <span class="mdl-chip">
-        <span class="mdl-chip__text">{{ post.category }}</span>
+        <a href="{{ post.get_category_url }}">
+            <span class="mdl-chip__text">{{ post.category }}</span>
+        </a>
     </span>
 </div>
 

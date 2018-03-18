@@ -12,8 +12,9 @@ class PostsListView(ListView):
     def get_queryset(self):
         """Filter by tag if it is provided in GET parameters"""
         queryset = super(PostsListView, self).get_queryset()
-        if 'tag' in self.request.GET:
-            queryset = queryset.filter(category=self.request.GET['tag'])
+
+        if 'category' in self.request.GET:
+            queryset = queryset.filter(category=self.request.GET['category'])
         return queryset
 
 

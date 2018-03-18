@@ -30,6 +30,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return "/news/%i/" % self.id
 
+    def get_category_url(self):
+        return "/news/?category=%s" % self.category.lower()
+
 
 class Comment(models.Model):
     news = models.ForeignKey(Post, on_delete=models.PROTECT)
